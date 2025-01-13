@@ -29,10 +29,6 @@ class Sorter
 
   private
 
-  def valid_amount?(amount)
-    !!(amount =~ /^[+-]?\d+(\.\d+)?$/)
-  end
-
   def cleanup_temp_files(temp_files)
     temp_files.each { |file| File.delete(file) if File.exist?(file) }
   end
